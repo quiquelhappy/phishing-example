@@ -1,0 +1,40 @@
+.width{
+  width: 100%;
+}
+
+.height{
+  height: 100%;
+}
+
+.accent{
+  background-color: #EFD28D;
+}
+
+.dark{
+  background-color: #DABF81;
+}
+
+.clear{
+  background-color: #F1DAA1;
+}
+
+@font-face {
+    font-family: AdiNeue;
+    src: url(adidas.woff);
+}
+
+.adidas{
+  font-family: AdiNeue;
+}
+
+.darktext{
+  color: #DABF81;
+}
+
+.hidden{
+  width: 0px;
+  height: 0px;
+  visibility: none;
+  overflow: hidden;
+  opacity: 0;
+}
